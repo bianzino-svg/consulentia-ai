@@ -167,7 +167,12 @@ def admin_users_page(request: Request):
     users = get_all_users()
     return templates.TemplateResponse(request, 'admin_users.html', {'request': request, 'user': current_user(request), 'users': users, 'page': 'admin'})
 
+from services.auth import set_user_premium, is_user_premium
 
+@app.post('/admin/users/{user_id}/premium')
+def admin_set_premium(request: Request, user_id: int, value: int = Form(...)):
+    set_user_premium(user_id, value)
+    return RedirectResponse('/admin/users-page', status_code=302)
 @app.get('/download')
 def download_file(request: Request, path: str):
     user = require_user(request)
