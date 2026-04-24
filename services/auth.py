@@ -125,3 +125,18 @@ def list_reports_for_user(user_id: int):
             """,
             (user_id,),
         ).fetchall()
+def get_all_users():
+    conn = sqlite3.connect(DB_PATH)
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT id, full_name, email FROM users")
+    users = cursor.fetchall()
+
+    return [
+        {
+            "id": u[0],
+            "name": u[1],
+            "email": u[2]
+        }
+        for u in users
+    ]
