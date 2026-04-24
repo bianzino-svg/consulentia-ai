@@ -161,3 +161,19 @@ def get_all_users():
         }
         for row in rows
     ]
+def set_user_premium(user_id: int, value: int):
+    with get_connection() as conn:
+        conn.execute(
+            "UPDATE users SET is_premium = ? WHERE id = ?",
+            (1 if int(value) == 1 else 0, user_id),
+        )
+        conn.commit()
+
+
+def is_user_premium(user_id: int) -> bool:
+    with get_connection() as conn:
+        row = conn.execute(
+            "SELECT COALESCE(is_premium, 0) as is_premium FROM users WHERE id = ?",
+            (user_id,),
+        ).fetchone()
+        return bool(row and int(row["is_premium"]) == 1)
