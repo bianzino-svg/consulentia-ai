@@ -29,6 +29,10 @@ def init_db() -> None:
             )
             """
         )
+        try:
+    conn.execute("ALTER TABLE users ADD COLUMN is_premium INTEGER DEFAULT 0")
+except:
+    pass
         conn.execute(
             """
             CREATE TABLE IF NOT EXISTS reports (
