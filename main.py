@@ -145,3 +145,9 @@ def download_file(request: Request, path: str):
     if not file_path.exists() or not file_path.is_file():
         return RedirectResponse('/app/reports', status_code=302)
     return FileResponse(str(file_path), filename=file_path.name)
+from services.auth import get_all_users
+
+@app.get("/admin/users")
+def admin_users():
+    users = get_all_users()
+    return users
