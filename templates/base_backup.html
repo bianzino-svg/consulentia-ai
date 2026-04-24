@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title or 'ConsulentIA AI' }}</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-wrap">
+      <img src="/static/logo_amb.png" alt="ConsulentIA AI" class="brand-logo" />
+      <div>
+        <div class="brand-name">ConsulentIA AI</div>
+        <div class="brand-tag">Analisi, strategia, soluzioni</div>
+      </div>
+    </div>
+    <nav class="topnav">
+      {% if user %}
+        <a href="/app/dashboard">Dashboard</a>
+        <a href="/app/fractals">Frattali</a>
+        <a href="/app/macro">Macro</a>
+        <a href="/app/allocation">Allocation</a>
+        <a href="/app/reports">Report</a>
+        <a href="/logout" class="btn btn-outline">Esci</a>
+      {% else %}
+        <a href="/login">Login</a>
+        <a href="/register" class="btn">Inizia</a>
+      {% endif %}
+    </nav>
+  </header>
+  <main class="page-shell">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

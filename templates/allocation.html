@@ -1,0 +1,37 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <span class="eyebrow">Asset allocation</span>
+    <h1>Commento e composizione del portafoglio</h1>
+  </div>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Allocazione base</h2>
+    <ul class="feature-list">
+      {% for k, v in bundle.allocation_base.items() %}
+      <li>{{ k }}: {{ v }}%</li>
+      {% endfor %}
+    </ul>
+  </section>
+  <section class="card">
+    <h2>Allocazione tattica</h2>
+    <ul class="feature-list">
+      {% for k, v in bundle.allocation_tactical.items() %}
+      <li>{{ k }}: {{ v }}%</li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>
+<section class="card">
+  <h2>Commento del portafoglio</h2>
+  <p>{{ bundle.allocation_comment }}</p>
+</section>
+<div class="grid three">
+  <section class="card"><h3>Azionari</h3><ul class="feature-list">{% for item in bundle.raw.equity_funds %}<li>{{ item }}</li>{% endfor %}</ul></section>
+  <section class="card"><h3>Obbligazionari</h3><ul class="feature-list">{% for item in bundle.raw.bond_funds %}<li>{{ item }}</li>{% endfor %}</ul></section>
+  <section class="card"><h3>Commodities / Altro</h3><ul class="feature-list">{% for item in bundle.raw.commodity_funds %}<li>{{ item }}</li>{% endfor %}{% for item in bundle.raw.abs_return_funds %}<li>{{ item }}</li>{% endfor %}</ul></section>
+</div>
+{% endblock %}

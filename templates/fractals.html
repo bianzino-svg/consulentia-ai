@@ -1,0 +1,26 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <span class="eyebrow">Analisi tecnica</span>
+    <h1>Frattali e semafori</h1>
+    <p class="subtle">{{ bundle.fractal_summary }} · {{ bundle.traffic_summary }}</p>
+  </div>
+</section>
+<div class="grid two">
+  {% for item in bundle.fractals %}
+  <section class="card">
+    <div class="row-between">
+      <h3>{{ item.label }}</h3>
+      <span class="badge">{{ item.light }} {{ item.light_text }}</span>
+    </div>
+    <p><strong>Prezzo:</strong> {{ item.price }}</p>
+    <p><strong>Frattale rialzista:</strong> {{ item.up_fractal }}</p>
+    <p><strong>Frattale ribassista:</strong> {{ item.down_fractal }}</p>
+    <p><strong>Stato:</strong> {{ item.status }}</p>
+    <p>{{ item.comment }}</p>
+  </section>
+  {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <span class="eyebrow">Archivio</span>
+    <h1>Report generati</h1>
+  </div>
+</section>
+<section class="card">
+  <table class="report-table">
+    <thead>
+      <tr><th>ID</th><th>Profilo</th><th>Creato</th><th>TXT</th><th>PDF</th><th>DOCX</th></tr>
+    </thead>
+    <tbody>
+      {% for row in reports %}
+      <tr>
+        <td>{{ row['id'] }}</td>
+        <td>{{ row['profile'] }}</td>
+        <td>{{ row['created_at'] }}</td>
+        <td><a href="/download?path={{ row['txt_path'] | urlencode }}">Scarica</a></td>
+        <td><a href="/download?path={{ row['pdf_path'] | urlencode }}">Scarica</a></td>
+        <td><a href="/download?path={{ row['docx_path'] | urlencode }}">Scarica</a></td>
+      </tr>
+      {% else %}
+      <tr><td colspan="6">Nessun report generato ancora.</td></tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}

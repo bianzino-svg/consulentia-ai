@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ConsulentIA AI</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-title" href="/">ConsulentIA AI</a>
+      <nav class="cta-row">
+        {% if user %}
+          <a href="/app/dashboard" class="btn btn-outline">Dashboard</a>
+          <a href="/logout" class="btn">Esci</a>
+        {% else %}
+          <a href="/login" class="btn btn-outline">Accedi</a>
+          <a href="/register" class="btn">Crea account</a>
+        {% endif %}
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    ConsulentIA AI · Analisi, strategia, soluzioni
+  </footer>
+</body>
+</html>

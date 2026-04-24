@@ -1,0 +1,60 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <span class="eyebrow">Dashboard</span>
+    <h1>Benvenuto {{ user['full_name'] }}</h1>
+    <p class="subtle">Profilo attivo: <strong>{{ bundle.raw.profile_label }}</strong> · Aggiornato: {{ bundle.raw.timestamp }}</p>
+  </div>
+  <form method="get" action="/app/dashboard" class="profile-form">
+    <select name="profile">
+      {% for option in ['prudente', 'bilanciato', 'dinamico'] %}
+      <option value="{{ option }}" {% if profile == option %}selected{% endif %}>{{ option|capitalize }}</option>
+      {% endfor %}
+    </select>
+    <button class="btn btn-outline" type="submit">Aggiorna</button>
+  </form>
+</section>
+<div class="grid two">
+  <section class="card">
+    <h2>Outlook</h2>
+    <p>{{ bundle.outlook }}</p>
+    <p class="subtle">{{ bundle.fractal_summary }} · {{ bundle.traffic_summary }}</p>
+  </section>
+  <section class="card">
+    <h2>Genera report</h2>
+    <p>Genera automaticamente il report completo PDF/DOCX per il profilo selezionato.</p>
+    <form method="post" action="/app/generate-report">
+      <input type="hidden" name="profile" value="{{ profile }}" />
+      <button class="btn" type="submit">Genera report</button>
+    </form>
+  </section>
+</div>
+<section class="card">
+  <h2>Mercati principali</h2>
+  <div class="market-grid">
+    {% for market in bundle.markets %}
+    <div class="market-item">
+      <strong>{{ market.name }}</strong>
+      <span>{{ market.last }}</span>
+      <span class="trend {{ market.trend }}">{{ market.trend }}</span>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+<div class="grid three">
+  <a class="card nav-card" href="/app/fractals?profile={{ profile }}">
+    <h3>Analisi tecnica / Frattali</h3>
+    <p>Semafori, stato tecnico e livelli chiave per i principali asset.</p>
+  </a>
+  <a class="card nav-card" href="/app/macro?profile={{ profile }}">
+    <h3>Macroeconomia</h3>
+    <p>Inflazione, crescita, tassi, consumi, lavoro e commento sintetico.</p>
+  </a>
+  <a class="card nav-card" href="/app/allocation?profile={{ profile }}">
+    <h3>Asset allocation</h3>
+    <p>Allocazione base, tattica e commento guidato per il profilo selezionato.</p>
+  </a>
+</div>
+{% endblock %}

@@ -1,0 +1,161 @@
+
+REPORT CONSULENZA - 23/04/2026 16:45:37
+
+PROFILO CLIENTE:
+Bilanciato
+
+VARIAZIONI RISPETTO ALL'ULTIMO REPORT:
+- Nessuna variazione rilevante rispetto all'ultimo report archiviato.
+
+MERCATI:
+- S&P500: 7135.81 (positivo)
+- Nasdaq: 24575.74 (positivo)
+- Oro: 4745.8 (negativo)
+- Petrolio: 93.39 (positivo)
+
+OUTLOOK:
+Il quadro generale resta costruttivo: gli indici principali tengono bene e il tono di mercato rimane favorevole.
+
+STRATEGIA:
+Approccio equilibrato: ricerca di rendimento con attenzione alla tenuta complessiva del portafoglio.
+Il contesto consente di essere un po' più costruttivi, ma sempre con ingressi graduali e senza inseguire il mercato.
+Meglio privilegiare strumenti liquidi, diversificati e facilmente monitorabili.
+
+STRUMENTI AZIONARI SUGGERITI:
+- Fidelity Funds - European Dynamic Growth Fund
+- Pictet - Global Megatrend Selection
+- MS INVF - Global Opportunity Fund
+- JPMorgan Funds - Global Focus Fund
+
+STRUMENTI OBBLIGAZIONARI SUGGERITI:
+- Franklin Templeton Investment Funds - Global Bond Fund
+- Nordea 1 - European Covered Bond Fund
+- Carmignac Sécurité
+- Amundi Funds - Global Aggregate Bond
+
+STRUMENTI COMMODITIES SUGGERITI:
+- BlackRock Global Funds - World Gold Fund
+- Schroder ISF - Global Energy
+
+STRUMENTI ABSOLUTE / TOTAL RETURN:
+- Nessuno
+
+ASSET ALLOCATION BASE:
+- Azionario: 45%
+- Obbligazionario: 35%
+- Commodities: 10%
+- Liquidità: 10%
+
+ASSET ALLOCATION TATTICA:
+- Azionario: 50%
+- Obbligazionario: 30%
+- Commodities: 10%
+- Liquidità: 10%
+
+MACROECONOMIA E PROIEZIONI:
+USA
+- Inflazione: 2.95% → 3.23%
+- GDP: 2.79% → 2.88%
+- Tassi: 3.25% → 3.28%
+- Consumi: 2.53% → 2.65%
+- Disoccupazione: 4.2% → 4.09%
+- Posti di lavoro (proxy): 59.11% → 59.12%
+- Leading interno: 100.46 → 100.49
+- Commento: crescita discreta, mercato del lavoro solido
+
+Cina
+- Inflazione: 0.22% → 0.03%
+- GDP: 4.98% → 4.82%
+- Tassi: 4.35% → 4.35%
+- Consumi: 4.98% → 4.85%
+- Disoccupazione: 4.62% → 4.62%
+- Posti di lavoro (proxy): 61.57% → 61.27%
+- Leading interno: 99.54 → 99.48
+- Commento: inflazione più sotto controllo, crescita discreta, mercato del lavoro solido
+
+Euro Area
+- Inflazione: n.d. → n.d.
+- GDP: 0.91% → 0.92%
+- Tassi: 2.0% → 2.0%
+- Consumi: 0.55% → 0.62%
+- Disoccupazione: 6.33% → 6.11%
+- Posti di lavoro (proxy): 53.37% → 53.54%
+- Leading interno: 100.43 → 100.43
+- Commento: quadro macro abbastanza neutro
+
+Germania
+- Inflazione: 2.26% → 2.61%
+- GDP: -0.5% → -0.67%
+- Tassi: n.d. → n.d.
+- Consumi: -0.72% → -0.8%
+- Disoccupazione: 3.71% → 3.7%
+- Posti di lavoro (proxy): 58.32% → 58.33%
+- Leading interno: 99.62 → 99.55
+- Commento: crescita debole, mercato del lavoro solido
+
+Italia
+- Inflazione: 0.98% → 1.33%
+- GDP: 0.69% → 0.86%
+- Tassi: n.d. → n.d.
+- Consumi: 1.22% → 1.44%
+- Disoccupazione: 6.39% → 5.95%
+- Posti di lavoro (proxy): 46.15% → 46.4%
+- Leading interno: 101.23 → 101.29
+- Commento: inflazione più sotto controllo
+
+NOTE INTERMARKET:
+- Il petrolio in rialzo può mantenere viva la sensibilità sul tema inflazione.
+
+ANALISI TECNICA / FRATTALI:
+Quadro tecnico misto: meglio aspettare conferme dove serve.
+Semafori: Verde 1 | Giallo 5 | Rosso 0
+
+- 🟡 S&P500 (attesa / conferma)
+  Prezzo: 7135.84
+  Frattale rialzista: 7147.52 (2026-04-17)
+  Frattale ribassista: 7050.2 (2026-04-21)
+  Stato: neutrale
+  Nota: Prezzo ancora in mezzo ai livelli chiave: serve conferma.
+- 🟢 Nasdaq (setup favorevole)
+  Prezzo: 24575.74
+  Frattale rialzista: 22189.34 (2026-03-23)
+  Frattale ribassista: 24198.99 (2026-04-21)
+  Stato: rialzista
+  Nota: Prezzo sopra l'ultimo frattale rialzista e sopra media 20 giorni.
+- 🟡 Oro (attesa / conferma)
+  Prezzo: 4745.8
+  Frattale rialzista: 4879.7 (2026-04-17)
+  Frattale ribassista: 4676.4 (2026-04-21)
+  Stato: neutrale
+  Nota: Prezzo ancora in mezzo ai livelli chiave: serve conferma.
+- 🟡 EUR/USD (attesa / conferma)
+  Prezzo: 1.17
+  Frattale rialzista: 1.19 (2026-04-17)
+  Frattale ribassista: 1.15 (2026-04-06)
+  Stato: neutrale
+  Nota: Prezzo ancora in mezzo ai livelli chiave: serve conferma.
+- 🟡 Bitcoin (attesa / conferma)
+  Prezzo: 77947.5
+  Frattale rialzista: 78320.68 (2026-04-17)
+  Frattale ribassista: 73775.57 (2026-04-20)
+  Stato: neutrale
+  Nota: Prezzo ancora in mezzo ai livelli chiave: serve conferma.
+- 🟡 Ethereum (attesa / conferma)
+  Prezzo: 2332.53
+  Frattale rialzista: 2464.78 (2026-04-17)
+  Frattale ribassista: 2254.7 (2026-04-19)
+  Stato: neutrale
+  Nota: Prezzo ancora in mezzo ai livelli chiave: serve conferma.
+
+AZIONI OPERATIVE:
+- Si può aumentare il rischio in modo graduale, senza entrare tutto insieme.
+- Il quadro tecnico aggregato è misto: meglio evitare sovraesposizioni e restare selettivi.
+- Azionario USA non perfettamente allineato: serve conferma.
+- Il comparto crypto manda segnali misti: meglio disciplina e selettività.
+
+NEWS RILEVANTI:
+- Nessuna news disponibile al momento.
+
+Nota confronto: l'asterisco * evidenzia le voci cambiate rispetto all'ultimo report archiviato dello stesso profilo.
+
+Disclaimer: il presente report è frutto di ricerca ed elaborazione tramite software proprietario. Ha finalità esclusivamente informative, di supporto all'analisi e di discussione professionale. Non costituisce consulenza personalizzata, raccomandazione individuale, sollecitazione all'investimento, offerta o invito all'acquisto o alla vendita di strumenti finanziari. Le analisi quantitative, tecniche, macroeconomiche e previsionali hanno natura indicativa e non garantiscono risultati futuri. I mercati possono evolvere in modo differente rispetto agli scenari ipotizzati. Prima di assumere decisioni operative è sempre opportuno verificare l'adeguatezza dello strumento, il profilo di rischio, i costi, la documentazione ufficiale e l'orizzonte temporale dell'investitore.

@@ -1,0 +1,42 @@
+{
+  "profile": "prudente",
+  "timestamp": "23/04/2026 16:47:18",
+  "base_allocation": {
+    "Azionario": 25,
+    "Obbligazionario": 55,
+    "Commodities": 10,
+    "Liquidità": 10
+  },
+  "final_allocation": {
+    "Azionario": 30,
+    "Obbligazionario": 52,
+    "Commodities": 10,
+    "Liquidità": 8
+  },
+  "equity_funds": [
+    "Fidelity Funds - European Dynamic Growth Fund",
+    "Pictet - Global Megatrend Selection",
+    "JPMorgan Funds - Global Focus Fund",
+    "Morgan Stanley Investment Funds - Global Opportunity Fund"
+  ],
+  "bond_funds": [
+    "Franklin Templeton Investment Funds - Global Bond Fund",
+    "Nordea 1 - European Covered Bond Fund",
+    "Carmignac Sécurité",
+    "Amundi Funds - Global Aggregate Bond"
+  ],
+  "commodity_funds": [
+    "BlackRock Global Funds - World Gold Fund",
+    "Schroder ISF - Global Energy"
+  ],
+  "abs_return_funds": [],
+  "outlook": "Il quadro generale resta costruttivo: gli indici principali tengono bene e il tono di mercato rimane favorevole.",
+  "fractal_lights": {
+    "S&P500": "🟡",
+    "Nasdaq": "🟢",
+    "Oro": "🟡",
+    "EUR/USD": "🟡",
+    "Bitcoin": "🟡",
+    "Ethereum": "🟡"
+  }
+}

@@ -1,0 +1,27 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <span class="eyebrow">Macroeconomia</span>
+    <h1>Scenario macro e proiezioni</h1>
+  </div>
+</section>
+<div class="grid two">
+  {% for row in bundle.macro %}
+  <section class="card">
+    <h3>{{ row.country }}</h3>
+    <div class="stats-list">
+      <div><span>Inflazione</span><strong>{{ row.inflation }}</strong></div>
+      <div><span>GDP</span><strong>{{ row.gdp }}</strong></div>
+      <div><span>Tassi</span><strong>{{ row.rates }}</strong></div>
+      <div><span>Consumi</span><strong>{{ row.consumption }}</strong></div>
+      <div><span>Disoccupazione</span><strong>{{ row.unemployment }}</strong></div>
+      <div><span>Jobs</span><strong>{{ row.jobs }}</strong></div>
+      <div><span>Leading</span><strong>{{ row.leading }}</strong></div>
+    </div>
+    <p>{{ row.comment }}</p>
+  </section>
+  {% endfor %}
+</div>
+{% endblock %}

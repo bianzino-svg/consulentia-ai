@@ -1,0 +1,13 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<section class="auth-wrap">
+  <form class="card auth-card" method="post" action="/login">
+    <h1>Accedi</h1>
+    {% if error %}<div class="alert">{{ error }}</div>{% endif %}
+    <label>Email<input type="email" name="email" required /></label>
+    <label>Password<input type="password" name="password" required /></label>
+    <button class="btn" type="submit">Entra</button>
+  </form>
+</section>
+{% endblock %}

@@ -1,0 +1,14 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<section class="auth-wrap">
+  <form class="card auth-card" method="post" action="/register">
+    <h1>Crea il tuo account</h1>
+    {% if error %}<div class="alert">{{ error }}</div>{% endif %}
+    <label>Nome completo<input type="text" name="full_name" required /></label>
+    <label>Email<input type="email" name="email" required /></label>
+    <label>Password<input type="password" name="password" required /></label>
+    <button class="btn" type="submit">Registrati</button>
+  </form>
+</section>
+{% endblock %}

@@ -1,0 +1,42 @@
+{
+  "profile": "bilanciato",
+  "timestamp": "23/04/2026 16:45:37",
+  "base_allocation": {
+    "Azionario": 45,
+    "Obbligazionario": 35,
+    "Commodities": 10,
+    "Liquidità": 10
+  },
+  "final_allocation": {
+    "Azionario": 50,
+    "Obbligazionario": 30,
+    "Commodities": 10,
+    "Liquidità": 10
+  },
+  "equity_funds": [
+    "Fidelity Funds - European Dynamic Growth Fund",
+    "Pictet - Global Megatrend Selection",
+    "MS INVF - Global Opportunity Fund",
+    "JPMorgan Funds - Global Focus Fund"
+  ],
+  "bond_funds": [
+    "Franklin Templeton Investment Funds - Global Bond Fund",
+    "Nordea 1 - European Covered Bond Fund",
+    "Carmignac Sécurité",
+    "Amundi Funds - Global Aggregate Bond"
+  ],
+  "commodity_funds": [
+    "BlackRock Global Funds - World Gold Fund",
+    "Schroder ISF - Global Energy"
+  ],
+  "abs_return_funds": [],
+  "outlook": "Il quadro generale resta costruttivo: gli indici principali tengono bene e il tono di mercato rimane favorevole.",
+  "fractal_lights": {
+    "S&P500": "🟡",
+    "Nasdaq": "🟢",
+    "Oro": "🟡",
+    "EUR/USD": "🟡",
+    "Bitcoin": "🟡",
+    "Ethereum": "🟡"
+  }
+}
