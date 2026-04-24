@@ -535,3 +535,7 @@ footer{
   color: #062B5B !important;
   font-weight: 700;
 }
+.premium-btn {
+  background: linear-gradient(180deg, #d4af37 0%, #c79a2c 100%);
+  color: #10213f;
+}
