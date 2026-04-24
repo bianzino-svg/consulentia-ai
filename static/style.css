@@ -513,3 +513,25 @@ footer{
   background: rgba(6,43,91,0.08) !important;
   border: 1px solid rgba(6,43,91,0.15) !important;
 }
+/* FIX HEADER VISIBILITÀ */
+
+.site-header a {
+  color: #062B5B !important;
+  font-weight: 600;
+}
+
+.site-header a:hover {
+  color: #0d3a78 !important;
+}
+
+/* Se hai classe active */
+.site-header .active {
+  color: #062B5B !important;
+  font-weight: 700;
+}
+
+/* Titoli tipo "Piani" */
+.page-head h1 {
+  color: #062B5B !important;
+  font-weight: 700;
+}
