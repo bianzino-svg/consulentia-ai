@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <span class="eyebrow">Admin</span>
+    <h1>Clienti registrati</h1>
+    <p style="color:#1f2e5a; max-width:760px;">
+      Da questa pagina puoi vedere i clienti, il numero di report generati e attivare o disattivare manualmente il piano Premium.
+    </p>
+  </div>
+</section>
+
+<section class="card">
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Report generati</th>
+        <th>Piano</th>
+        <th>Azione</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+      <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.report_count }}</td>
+        <td>
+          {% if user.is_premium %}
+            <strong style="color:#062B5B;">Premium</strong>
+          {% else %}
+            Free
+          {% endif %}
+        </td>
+        <td>
+          {% if user.is_premium %}
+            <form method="post" action="/admin/users/{{ user.id }}/premium" style="margin:0;">
+              <input type="hidden" name="value" value="0">
+              <button type="submit" class="btn btn-outline">Disattiva Premium</button>
+            </form>
+          {% else %}
+            <form method="post" action="/admin/users/{{ user.id }}/premium" style="margin:0;">
+              <input type="hidden" name="value" value="1">
+              <button type="submit" class="btn premium-btn">Attiva Premium</button>
+            </form>
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}
