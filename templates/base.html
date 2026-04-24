@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ConsulentIA AI</title>
-  <link rel="stylesheet" href="/static/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConsulentIA AI</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/static/style.css">
+
+    <!-- 🔥 PWA -->
+    <link rel="manifest" href="/static/manifest.json">
+    <meta name="theme-color" content="#0b1f3a">
+
+    <!-- iOS -->
+    <link rel="apple-touch-icon" href="/static/icon.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="site-title" href="/">ConsulentIA AI</a>
-      <nav class="cta-row">
-        {% if user %}
-          <a href="/app/dashboard" class="btn btn-outline">Dashboard</a>
-          <a href="/logout" class="btn">Esci</a>
-        {% else %}
-          <a href="/login" class="btn btn-outline">Accedi</a>
-          <a href="/register" class="btn">Crea account</a>
-        {% endif %}
-      </nav>
+
+<header class="site-header">
+    <div class="container">
+        <h1 class="logo">ConsulentIA AI</h1>
+        <nav>
+            <a href="/app/dashboard">Dashboard</a>
+            <a href="/pricing">Piani</a>
+            <a href="/logout">Logout</a>
+        </nav>
     </div>
-  </header>
+</header>
 
-  <main class="page">
+<main class="container">
     {% block content %}{% endblock %}
-  </main>
+</main>
 
-  <footer>
-    ConsulentIA AI · Analisi, strategia, soluzioni
-  </footer>
 </body>
 </html>
