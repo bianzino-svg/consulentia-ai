@@ -272,7 +272,14 @@ def create_report(request: Request, profile: str = Form(...)):
     premium = is_user_premium(user_id)
 
     if (not premium) and report_count >= FREE_REPORT_LIMIT:
-        return RedirectResponse("/pricing", status_code=302)
+    return templates.TemplateResponse(
+        request,
+        "limit.html",
+        {
+            "request": request,
+            "user": user
+        }
+    )
 
     generate_user_report(user_id, profile)
     return RedirectResponse("/app/reports", status_code=302)
