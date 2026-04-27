@@ -12,6 +12,7 @@ from services.auth import (
     authenticate_user,
     create_user,
     get_user_by_id,
+    get_user_by_email,
     init_db,
     list_reports_for_user,
     get_all_users,
