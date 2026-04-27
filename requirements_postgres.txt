@@ -1,0 +1,14 @@
+fastapi
+uvicorn[standard]
+jinja2
+python-multipart
+itsdangerous
+yfinance
+matplotlib
+reportlab
+python-docx
+pandas
+numpy
+requests
+lxml
+psycopg2-binary
