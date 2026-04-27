@@ -180,7 +180,7 @@ def create_report(request: Request, profile: str = Form(...)):
 
 # ---------------- ADMIN ----------------
 
-ADMIN_EMAIL = "info@bianzino.it".lower()
+ADMIN_EMAIL = "info@bianzino.it"
 
 
 @app.get('/admin/users-page', response_class=HTMLResponse)
