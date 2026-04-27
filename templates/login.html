@@ -1,13 +1,20 @@
 
 {% extends 'base.html' %}
 {% block content %}
+
 <section class="auth-wrap">
-  <form class="card auth-card" method="post" action="/login">
+  <form class="card auth-card" method="post" action="/send-code">
     <h1>Accedi</h1>
-    {% if error %}<div class="alert">{{ error }}</div>{% endif %}
-    <label>Email<input type="email" name="email" required /></label>
-    <label>Password<input type="password" name="password" required /></label>
-    <button class="btn" type="submit">Entra</button>
+
+    <p>Inserisci la tua email. Riceverai un codice per accedere.</p>
+
+    <label>
+      Email
+      <input type="email" name="email" required />
+    </label>
+
+    <button class="btn" type="submit">Ricevi codice</button>
   </form>
 </section>
+
 {% endblock %}
