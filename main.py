@@ -1,3 +1,5 @@
+import random
+from services.email_service import send_otp_email
 from pathlib import Path
 
 from fastapi import FastAPI, Form, Request
@@ -18,7 +20,7 @@ from services.auth import (
     is_user_premium,
 )
 from services.dashboard_service import get_dashboard_bundle, generate_user_report
-
+otp_storage = {}
 BASE_DIR = Path(__file__).resolve().parent
 FREE_REPORT_LIMIT = 3
 ADMIN_EMAIL = "info@bianzino.it"
@@ -324,3 +326,49 @@ def download_file(request: Request, path: str):
         return RedirectResponse("/app/reports", status_code=302)
 
     return FileResponse(str(file_path), filename=file_path.name)
+@app.get('/otp-login', response_class=HTMLResponse)
+def otp_login_page(request: Request):
+    return templates.TemplateResponse(
+        request,
+        'otp_login.html',
+        {'request': request}
+    )
+
+
+@app.post('/send-code')
+def send_code(request: Request, email: str = Form(...)):
+    code = str(random.randint(100000, 999999))
+
+    otp_storage[email] = code
+
+    send_otp_email(email, code)
+
+    return templates.TemplateResponse(
+        request,
+        'otp_verify.html',
+        {'request': request, 'email': email}
+    )
+
+
+@app.post('/verify-code')
+def verify_code(request: Request, email: str = Form(...), code: str = Form(...)):
+    saved_code = otp_storage.get(email)
+
+    if not saved_code or saved_code != code:
+        return templates.TemplateResponse(
+            request,
+            'otp_verify.html',
+            {'request': request, 'email': email, 'error': 'Codice errato'}
+        )
+
+    user = get_user_by_email(email)
+
+    if not user:
+        user_id = create_user("Cliente", email, "nopassword")
+    else:
+        user_id = user['id']
+
+    request.session.clear()
+    request.session['user_id'] = int(user_id)
+
+    return RedirectResponse('/app/dashboard', status_code=302)
