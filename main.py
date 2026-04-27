@@ -272,6 +272,16 @@ def create_report(request: Request, profile: str = Form(...)):
     premium = is_user_premium(user_id)
 
     if (not premium) and report_count >= FREE_REPORT_LIMIT:
+    
+        # 🔔 NOTIFICA ADMIN
+        try:
+            send_otp_email(
+                "bianzino@gmail.com",
+                f"Utente arrivato al limite: {user['email']}"
+            )
+        except:
+            pass
+
         return templates.TemplateResponse(
             request,
             "limit.html",
