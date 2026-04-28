@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<section class="card" style="text-align:center; max-width:760px; margin:40px auto;">
+
+  <span class="eyebrow">Accesso Premium</span>
+
+  <h1>Hai completato la prova gratuita</h1>
+
+  <p style="font-size:18px; max-width:620px; margin:18px auto;">
+    Hai utilizzato i report inclusi nella versione Free.
+    Per continuare ad accedere ad analisi tecnica, asset allocation, scenario macro e report,
+    puoi attivare ConsulentIA Premium.
+  </p>
+
+  <div class="grid two" style="margin:28px 0; text-align:left;">
+    <section class="card soft">
+      <h3>Premium digitale</h3>
+      <p>Accesso alla piattaforma ConsulentIA AI con report e sezioni operative senza il limite della prova gratuita.</p>
+      <ul class="feature-list">
+        <li>Report continuativi</li>
+        <li>Analisi tecnica / frattali</li>
+        <li>Asset allocation</li>
+        <li>Scenario macroeconomico</li>
+      </ul>
+      <div style="margin-top:18px; font-size:20px;">
+        <strong>9€ / mese</strong><br>
+        <span style="font-size:15px;">oppure <strong>100€ / anno</strong></span>
+      </div>
+    </section>
+
+    <section class="card soft">
+      <h3>Cliente reale ConsulentIA</h3>
+      <p>
+        Se diventi cliente reale ConsulentIA, l’accesso alla piattaforma è incluso
+        nei servizi di consulenza e gestione del portafoglio.
+      </p>
+      <ul class="feature-list">
+        <li>Supporto diretto</li>
+        <li>Servizio personalizzato</li>
+        <li>Piattaforma inclusa</li>
+        <li>Visione integrata del portafoglio</li>
+      </ul>
+    </section>
+  </div>
+
+  <p style="margin-top:22px;">
+    Vuoi continuare? Clicca qui sotto e inviami una richiesta di attivazione.
+  </p>
+
+  <a class="btn" href="mailto:info@bianzino.it?subject=Richiesta%20attivazione%20Premium%20ConsulentIA&body=Buongiorno,%0D%0Avorrei%20attivare%20ConsulentIA%20Premium.%0D%0A%0D%0AEmail%20account:%20{{ user.email }}%0D%0A">
+    Richiedi attivazione Premium
+  </a>
+
+  <p style="margin-top:18px; font-size:13px; color:#667085;">
+    La richiesta verrà gestita manualmente. Dopo l’attivazione potrai continuare a usare la piattaforma.
+  </p>
+
+</section>
+
+{% endblock %}
