@@ -19,7 +19,7 @@ from services.auth import (
 BASE_DIR = Path(__file__).resolve().parent
 
 # 🔔 TELEGRAM CONFIG
-BOT_TOKEN = "METTI_QUI_IL_TUO_TOKEN"
+BOT_TOKEN = "8680952100:AAGLaefu2bIaNkjT0MiYijVD7r-kvdXhgto"
 CHAT_ID = "419716347"
 
 def send_telegram(msg):
