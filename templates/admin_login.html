@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="auth-wrap">
+  <form class="card auth-card" method="post" action="/admin-login">
+    <h1>Accesso amministratore</h1>
+    {% if error %}<div class="alert">{{ error }}</div>{% endif %}
+    <label>Email admin<input type="email" name="email" required /></label>
+    <label>Password admin<input type="password" name="password" required /></label>
+    <button class="btn" type="submit">Entra in admin</button>
+  </form>
+</section>
+{% endblock %}
