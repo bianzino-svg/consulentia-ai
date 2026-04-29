@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="page-head">
+  <div>
+    <span class="eyebrow">Admin</span>
+    <h1>Clienti registrati</h1>
+    <p style="color:#1f2e5a; max-width:760px;">Da questa pagina puoi vedere le richieste di accesso, copiare il codice personale e attivare Free/Premium.</p>
+  </div>
+</section>
+<section class="card">
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th><th>Nome</th><th>Email</th><th>Codice accesso</th><th>Stato</th><th>Report</th><th>Piano</th><th>Azioni</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+      <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td><strong>{{ user.access_code }}</strong></td>
+        <td>{{ user.access_status }}</td>
+        <td>{{ user.report_count }}</td>
+        <td>{% if user.is_premium %}<strong style="color:#062B5B;">Premium</strong>{% else %}Free{% endif %}</td>
+        <td>
+          <div style="display:flex; gap:8px; flex-wrap:wrap;">
+            {% if user.is_premium %}
+              <form method="post" action="/admin/users/{{ user.id }}/premium" style="margin:0;"><input type="hidden" name="value" value="0"><button type="submit" class="btn btn-outline">Disattiva Premium</button></form>
+            {% else %}
+              <form method="post" action="/admin/users/{{ user.id }}/premium" style="margin:0;"><input type="hidden" name="value" value="1"><button type="submit" class="btn premium-btn">Attiva Premium</button></form>
+            {% endif %}
+            {% if user.access_status == 'active' %}
+              <form method="post" action="/admin/users/{{ user.id }}/active" style="margin:0;"><input type="hidden" name="value" value="0"><button type="submit" class="btn btn-outline">Sospendi</button></form>
+            {% else %}
+              <form method="post" action="/admin/users/{{ user.id }}/active" style="margin:0;"><input type="hidden" name="value" value="1"><button type="submit" class="btn">Attiva</button></form>
+            {% endif %}
+            <form method="post" action="/admin/users/{{ user.id }}/regenerate-code" style="margin:0;"><button type="submit" class="btn btn-outline">Nuovo codice</button></form>
+          </div>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% endblock %}
